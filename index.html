@@ -126,8 +126,43 @@
                 </div>
             </article>
             <!-- ---- card section end ---- -->
-            
-            
+
+            <!-- ---- calculation section start ---- -->
+            <aside class="ml-5">
+                <!-- ---- selection div ---- -->
+                <div id="selected-v" class="bg-zinc-900 p-8">
+                    <h3 class="text-3xl">Selected-V</h3>
+                    <ol id="selected-player-list" class="list-decimal"></ol>
+                </div>
+                <!-- ---- budget div ---- -->
+                <div class="bg-zinc-900 p-8 mt-8">
+                    <h3 class="text-3xl">Selected-V</h3>
+                    <div class="flex justify-between mt-3">
+                        <p>Per Player</p>
+                        <input id="per-player-cost" class="w-1/2 text-black rounded" type="text">
+                    </div>
+                    <button id="calculate-btn" class="bg-blue-600 w-full mt-3 py-1 rounded">Calculate</button>
+                    
+                    <div class="flex justify-between text-xl mt-3">
+                        <p>Player Expenses</p>
+                        <p class="text-red-200">$<span id="player-expenses">5000</span></p>
+                    </div>
+                    <div class="flex justify-between mt-3">
+                        <p>Manager</p>
+                        <input id="manager-cost" class="w-1/2 text-black rounded" type="text">
+                    </div>
+                    <div class="flex justify-between mt-3">
+                        <p>Coach</p>
+                        <input id="coach-cost" class="w-1/2 text-black rounded" type="text">
+                    </div>
+                    <button id="calculate-total-btn" class="bg-blue-600 w-full mt-3 py-1 rounded">Calculate</button>
+                    <div class="flex justify-between text-xl mt-3">
+                        <p>Total</p>
+                        <p class="text-red-500">$<span id="total-expenses">5000</span></p>
+                    </div>
+                </div>
+            </aside>
+            <!-- ---- calculation section end ---- -->
         </section>
     </main>
     <!-- ---- main section end ---- -->
