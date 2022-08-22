@@ -25,3 +25,12 @@ function setTextElementById(elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
+
+// ---- get list length by id ----
+function getListLengthByid(elementId){
+    const listConatiner = document.getElementById(elementId);
+    return listConatiner.childNodes.length;
+}
+
+// const a = getListLengthByid('selected-player-list')
+// console.log(a)
