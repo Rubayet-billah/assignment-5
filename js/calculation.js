@@ -28,3 +28,35 @@ for ( const selectButton of selectButtons){
         event.target.setAttribute('disabled', true);
     });
 }
+
+
+// ---- calculate and set the player expenses ----
+document.getElementById('calculate-btn').addEventListener('click', function(){
+    const playerNumber = getListLengthByid('selected-player-list');
+    const perPlayerCost = getInputValuesById('per-player-cost');
+    if(!isNaN(perPlayerCost) === true){
+
+        const playerExpenses = playerNumber * perPlayerCost;
+        setTextElementById('player-expenses', playerExpenses);
+    }
+    else{
+        alert ('Input value is not a number');
+    }
+    // console.log(a)
+})
+
+// ---- calculate and set the total expenses ----
+document.getElementById('calculate-total-btn').addEventListener('click', function(){
+    const playerExpenses = getTextElementById('player-expenses');
+    const managerCost = getInputValuesById('manager-cost');
+    const coachCost = getInputValuesById('coach-cost');
+    if(!isNaN(playerExpenses) === true && !isNaN(managerCost) === true && !isNaN(coachCost) === true){
+        const totalCost = playerExpenses + managerCost + coachCost;
+        setTextElementById('total-expenses', totalCost);
+    }
+    else{
+        alert ('Input value is not a number');
+    }
+})
+
+
