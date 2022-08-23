@@ -1,8 +1,3 @@
-// document.getElementById('player-cards').addEventListener('click', function(event){
-//     console.log(event.target.parentNode.children[0].innerText);
-// })
-
-
 //---- get player name by clicking select player button ----
 const selectButtons = document.getElementsByClassName('select-player-btn');
 const selectedPlayerList = document.getElementById('selected-player-list');
@@ -10,8 +5,6 @@ const selectedPlayerList = document.getElementById('selected-player-list');
 for ( const selectButton of selectButtons){
     selectButton.addEventListener('click', function(event){
         const playerName = event.target.parentNode.children[0].innerText;
-
-        
 
         //---- set player name in the selected player list ----
         //---- create li element -----
