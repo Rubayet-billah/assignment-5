@@ -12,16 +12,17 @@ for ( const selectButton of selectButtons){
         li.innerText = playerName;
         //---- append player name list ----
         const listLength = selectedPlayerList.childNodes.length;
+        const btn = event.target;
         if( listLength < 5){
             selectedPlayerList.appendChild(li);
+            btn.setAttribute('disabled', true);
+            btn.style.backgroundColor = 'gray';
+            btn.style.color = 'lightgray';
         }
         else{
             alert ('Maximum number of player added');
         }
-        const btn = event.target;
-        btn.setAttribute('disabled', true);
-        btn.style.backgroundColor = 'gray';
-        btn.style.color = 'lightgray';
+        
     });
 }
 
