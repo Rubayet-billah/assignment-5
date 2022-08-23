@@ -23,9 +23,12 @@ for ( const selectButton of selectButtons){
             selectedPlayerList.appendChild(li);
         }
         else{
-            alert ('Maximum number of player added')
+            alert ('Maximum number of player added');
         }
-        event.target.setAttribute('disabled', true);
+        const btn = event.target;
+        btn.setAttribute('disabled', true);
+        btn.style.backgroundColor = 'gray';
+        btn.style.color = 'lightgray';
     });
 }
 
